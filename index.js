@@ -21,8 +21,8 @@ function humanizeDuration ( moment_obj, did_leave_company ) {
     var days,
         months = moment_obj.months(),
         years = moment_obj.years(),
-        month_str = months > 1 ? 'months' : 'month',
-        year_str = years > 1 ? 'years' : 'year';
+        month_str = 'mois',
+        year_str = years > 1 ? 'ans' : 'an';
 
     if ( months && years ) {
         return years + ' ' + year_str + ' ' + months + ' ' + month_str;
@@ -39,9 +39,9 @@ function humanizeDuration ( moment_obj, did_leave_company ) {
     if ( did_leave_company ) {
         days = moment_obj.days();
 
-        return ( days > 1 ? days + ' days' : days + ' day' );
+        return ( days > 1 ? days + ' jours' : days + ' jour' );
     } else {
-        return 'Recently joined';
+        return 'Rejoint récemment';
     }
 }
 
@@ -127,7 +127,7 @@ function render(resume) {
     });
 
     _.each( resume.skills, function( skill_info ) {
-        var levels = [ 'Beginner', 'Intermediate', 'Advanced', 'Master' ];
+        var levels = [ 'Débutant', 'Intermédiaire', 'Avancé', 'Master' ];
 
         if ( skill_info.level ) {
             skill_info.skill_class = skill_info.level.toLowerCase();
@@ -167,7 +167,7 @@ function render(resume) {
 
     _.each( resume.publications, function( publication_info ) {
         if ( publication_info.releaseDate ) {
-            publication_info.releaseDate = moment( new Date( publication_info.releaseDate ) ).format( 'MMM DD, YYYY' )
+            publication_info.releaseDate = moment( new Date( publication_info.releaseDate ) ).format( 'DD MM YYYY' )
         }
     });
 
