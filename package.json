@@ -17,7 +17,7 @@
   "homepage": "https://github.com/icoloma/jsonresume-theme-kwan",
   "dependencies": {
     "gravatar": "^1.0.6",
-    "handlebars": "^2.0.0-alpha.4",
+    "handlebars": "^4.7.6",
     "moment": "^2.8.1",
     "optimist": "^0.6.1",
     "resume-schema": "0.0.15",
@@ -25,11 +25,11 @@
     "underscore": "^1.6.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-less": "^0.11.4",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt": "^1.1.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-exec": "^0.4.6",
-    "less": "^1.7.5",
-    "underscore.string": "^2.3.3"
+    "less": "^3.11.1",
+    "underscore.string": "^3.3.5"
   }
 }
